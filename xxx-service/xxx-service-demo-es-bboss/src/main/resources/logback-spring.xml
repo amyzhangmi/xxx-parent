@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="60 seconds">
+    <property name="APP_NAME" value="xxx-service-demo-es-bboss"/>
+    <property name="LOG_DIR" value="E:/logs"/>
+
+    <!-- 控制台日志打印 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%p] [%t] [%c] - %m%n</Pattern>
+        </layout>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <prudent>true</prudent>
+        <!--缓存大小-->
+        <bufferSize>10</bufferSize>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/${APP_NAME}/${APP_NAME}_%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%p] [%t] [%c] - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework">
+        <level value="warn"/>
+    </logger>
+    <logger name="ch.qos.logback">
+        <level value="warn"/>
+    </logger>
+
+    <logger name="com.xxx.demo.mapper" level="DEBUG"/>
+
+        
+    <root level="info">
+        <!--请在生产环境禁用控制台输出-->
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+            
+    </root>
+         
+</configuration>

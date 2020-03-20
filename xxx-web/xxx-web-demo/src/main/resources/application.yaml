@@ -1,0 +1,14 @@
+
+spring:
+  application:
+    name: xxx-web-demo
+server:
+  port: 9001
+
+# eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    prefer-ip-address: true

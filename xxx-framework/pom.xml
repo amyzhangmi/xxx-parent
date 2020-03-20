@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>xxx-parent</artifactId>
+        <groupId>com.xxx</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>xxx-framework</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>xxx-framework-util</module>
+        <module>xxx-framework-common</module>
+        <module>xxx-framework-mvc</module>
+        <module>xxx-framework-mybatis-tk</module>
+        <module>xxx-framework-ureka</module>
+        <module>xxx-framework-feign</module>
+        <module>xxx-framework-apollo</module>
+        <module>xxx-framework-es-bboss</module>
+        <module>xxx-framework-mongo</module>
+        <module>xxx-framework-redis</module>
+    </modules>
+
+
+</project>

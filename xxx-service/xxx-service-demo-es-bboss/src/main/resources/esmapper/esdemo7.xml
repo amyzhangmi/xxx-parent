@@ -1,0 +1,47 @@
+<properties>
+    <!--
+           For Elasticsearch 7.0.0
+           创建demo需要的索引表结构
+       -->
+    <property name="createDemoIndice">
+        <![CDATA[{
+            "settings": {
+                "number_of_shards": 2,
+                "number_of_replicas": 1,
+                "index.refresh_interval": "5s"
+            },
+            "mappings": {
+                "properties": {
+                    "id":{
+                        "type":"long"
+                    },
+                    "name": {
+                        "type": "text"
+                    },
+                    "code": {
+                        "type": "integer"
+                    },
+                    "price": {
+                        "type": "double"
+                    },
+                    "type": {
+                        "type": "integer"
+                    },
+                    "create_time": {
+                            "type": "date",
+                             "format":"yyyy-MM-dd HH:mm:ss.SSS||yyyy-MM-dd'T'HH:mm:ss.SSS||yyyy-MM-dd HH:mm:ss||epoch_millis"
+                    },
+                    "update_time": {
+                            "type": "date",
+                             "format":"yyyy-MM-dd HH:mm:ss.SSS||yyyy-MM-dd'T'HH:mm:ss.SSS||yyyy-MM-dd HH:mm:ss||epoch_millis"
+                    }
+                }
+            }
+        }]]>
+    </property>
+
+    <property name="queryPid"><![CDATA[{
+        "query": { "match": { "id": #[id] } }
+     }]]>
+    </property>
+</properties>
