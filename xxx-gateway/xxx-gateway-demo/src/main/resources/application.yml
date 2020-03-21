@@ -19,12 +19,22 @@ spring:
           uri: lb://xxx-service-demo
           predicates:
             - Path=/goods/**
-#          filters:
-#            - StripPrefix= 1
+
         - id: xxx-web-demo
           uri: lb://xxx-web-demo
           predicates:
             - Path=/brand/**
+          filters:
+            #            - StripPrefix= 1
+            - name: RequestRateLimiter #请求数限流 名字不能随便写
+              args:
+                key-resolver: "#{@ipKeyResolver}"
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
+  # 配置Redis 127.0.0.1可以省略配置
+  redis:
+    host: 192.168.64.201
+    port: 6379
 # eureka
 eureka:
   client:
