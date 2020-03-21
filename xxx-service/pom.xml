@@ -17,6 +17,7 @@
         <module>xxx-service-demo-canal</module>
         <module>xxx-service-demo-es-bboss</module>
         <module>xxx-service-demo-redis</module>
+        <module>xxx-service-demo-rocketmq</module>
     </modules>
 
 

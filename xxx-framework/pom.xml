@@ -22,6 +22,7 @@
         <module>xxx-framework-es-bboss</module>
         <module>xxx-framework-mongo</module>
         <module>xxx-framework-redis</module>
+        <module>xxx-framework-rocketmq</module>
     </modules>
 
 
