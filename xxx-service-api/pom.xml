@@ -16,6 +16,7 @@
         <module>xxx-service-demo-es-bboss-api</module>
         <module>xxx-service-api-demo-redis</module>
         <module>xxx-service-api-demo-rocketmq</module>
+        <module>xxx-service-api-system</module>
     </modules>
 
     <dependencies>

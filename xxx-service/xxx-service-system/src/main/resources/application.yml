@@ -1,5 +1,5 @@
 server:
-  port: 8002
+  port: 8007
 
 spring:
   # datasource 数据源配置内容
@@ -9,13 +9,13 @@ spring:
     username: root
     password: root
   application:
-    name: xxx-service-demo
+    name: xxx-service-system
 
 # mybatis 配置内容
 mybatis:
   config-location: classpath:mybatis-config.xml # 配置 MyBatis 配置文件路径
   mapper-locations: classpath:mapper/*/*.xml # 配置 Mapper XML 地址
-  type-aliases-package: com.xxx.demo.bo # 配置数据库实体包路径
+  type-aliases-package: com.xxx.system.bo # 配置数据库实体包路径
 
 # mapper 配置内容
 mapper:
@@ -37,27 +37,3 @@ eureka:
       defaultZone: http://127.0.0.1:7001/eureka
   instance:
     prefer-ip-address: true
-
-
-#server:
-#  port: 8001 # 避免和本地的 Apollo Portal 端口冲突
-#
-#spring:
-#  application:
-#    name: xxx-service-demo
-#    main:
-#      allow-bean-definition-overriding: true
-#
-#app:
-#  id: ${spring.application.name}
-#
-#env: dev
-#
-##apollo.bootstrap.enabled：在应用启动阶段，向Spring容器注入被托管的application.properties文件的配置信息
-##这里和porto里面都是使用的是18080不是eureka的地址
-#apollo:
-#  bootstrap:
-#    enabled: true
-#    eagerLoad: true
-#    namespaces: application
-#  meta: http://192.168.64.201:18080,http://192.168.64.201:18081

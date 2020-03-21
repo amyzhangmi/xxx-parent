@@ -31,6 +31,17 @@ spring:
                 key-resolver: "#{@ipKeyResolver}"
                 redis-rate-limiter.replenishRate: 1
                 redis-rate-limiter.burstCapacity: 1
+        - id: xxx-service-system
+          uri: lb://xxx-service-system
+          predicates:
+            - Path=/system/**
+          filters:
+            #            - StripPrefix= 1
+            - name: RequestRateLimiter #请求数限流 名字不能随便写
+              args:
+                key-resolver: "#{@ipKeyResolver}"
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
   # 配置Redis 127.0.0.1可以省略配置
   redis:
     host: 192.168.64.201

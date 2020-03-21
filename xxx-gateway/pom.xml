@@ -16,4 +16,17 @@
         <module>xxx-gateway-demo</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.xxx</groupId>
+            <artifactId>xxx-framework-common</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.xxx</groupId>
+                    <artifactId>xxx-framework-mvc</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
 </project>

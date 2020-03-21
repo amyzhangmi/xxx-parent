@@ -18,6 +18,7 @@
         <module>xxx-service-demo-es-bboss</module>
         <module>xxx-service-demo-redis</module>
         <module>xxx-service-demo-rocketmq</module>
+        <module>xxx-service-system</module>
     </modules>
 
 
