@@ -23,6 +23,7 @@
         <module>xxx-framework-mongo</module>
         <module>xxx-framework-redis</module>
         <module>xxx-framework-rocketmq</module>
+        <module>xxx-framework-gateway</module>
     </modules>
 
 
