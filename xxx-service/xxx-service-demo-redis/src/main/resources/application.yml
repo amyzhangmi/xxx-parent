@@ -4,7 +4,7 @@ spring:
   # redis配置
   redis:
     cluster:
-      nodes: 192.168.64.201:6379
+      nodes: 192.168.64.201:7011,192.168.64.201:7012,192.168.64.201:7013,192.168.64.201:7014,192.168.64.201:7015,192.168.64.201:7016
       max-redirects: 3
     lettuce:
       pool:
@@ -13,6 +13,7 @@ spring:
         min-idle: 5       # 连接池最小空闲连接
         max-wait: -1ms    # 连接池最大阻塞时间
     timeout: 3000ms
+    password: 123456
 
   session:
     store-type: redis
