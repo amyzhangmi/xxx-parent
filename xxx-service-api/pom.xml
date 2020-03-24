@@ -17,6 +17,7 @@
         <module>xxx-service-api-demo-redis</module>
         <module>xxx-service-api-demo-rocketmq</module>
         <module>xxx-service-api-system</module>
+        <module>xxx-service-api-demo-kafka</module>
     </modules>
 
     <dependencies>
