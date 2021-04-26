@@ -27,7 +27,7 @@
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
         <commons-lang3.version>3.8.1</commons-lang3.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
-        <commons-io.verison>2.6</commons-io.verison>
+        <commons-io.verison>2.7</commons-io.verison>
         <fastjson.version>1.2.49</fastjson.version>
     </properties>
 
